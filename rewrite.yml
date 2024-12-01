@@ -1,0 +1,10 @@
+type: specs.openrewrite.org/v1beta/recipe
+name: com.github.timtebeek.BetterAssertions
+displayName: Better Assertions
+description: >
+  Convert various imperfect assertion patterns to AssertJ.
+recipeList:
+  - org.openrewrite.java.testing.assertj.Assertj
+#  - org.openrewrite.java.testing.junit5.JUnit5BestPractices
+---
+# TODO Switch to Java 21 for tests only
