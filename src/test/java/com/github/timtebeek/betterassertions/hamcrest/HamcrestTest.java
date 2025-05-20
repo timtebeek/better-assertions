@@ -41,8 +41,18 @@ class HamcrestTest {
     void failingTest() {
         List<Book> books = new Bundle().getBooks();
 
+        // Wrong way with Hamcrest:
         assertThat(books, contains(new Book("Effective Java", "Joshua Bloch", 2001)));
         assertThat(books, contains(new Book("Java Concurrency in Practice", "Brian Goetz", 2006)));
         assertThat(books, contains(new Book("Clean Code", "Robert C. Martin", 2008)));
+
+        // Correct way with Hamcrest:
+        assertThat(books, contains(
+                new Book("Effective Java", "Joshua Bloch", 2001),
+                new Book("Java Concurrency in Practice", "Brian Goetz", 2006),
+                new Book("Clean Code", "Robert C. Martin", 2008)
+        ));
+
+        // Not always clear what's correct
     }
 }

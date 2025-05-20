@@ -9,6 +9,7 @@ public class JUnitThreeTest extends junit.framework.TestCase { // Can only exten
 
     // + No Annotations, just plain old JUnit 3
     // - Must start with `test`
+    // - Must be `public`
     public void testBundle() {
         List<Book> books = new Bundle().getBooks();
 
