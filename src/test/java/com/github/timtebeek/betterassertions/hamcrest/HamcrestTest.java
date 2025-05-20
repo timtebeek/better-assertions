@@ -2,6 +2,7 @@ package com.github.timtebeek.betterassertions.hamcrest;
 
 import com.github.timtebeek.betterassertions.Book;
 import com.github.timtebeek.betterassertions.Bundle;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -35,6 +36,7 @@ class HamcrestTest {
 
     // Incorrect usage of Hamcrest
     // - First case passes; second and third cases fail
+    @Disabled
     @Test
     void failingTest() {
         List<Book> books = new Bundle().getBooks();

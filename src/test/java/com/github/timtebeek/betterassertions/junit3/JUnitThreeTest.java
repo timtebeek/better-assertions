@@ -27,7 +27,7 @@ public class JUnitThreeTest extends junit.framework.TestCase { // Can only exten
 
     // Overuse of `assertTrue`, `assertFalse` and `assertEquals`
     // - Makes it hard to understand what is being tested, especially when tests fail
-    public void testThatFails() {
+    public void disabledTestThatFails() {
         List<Book> books = new Bundle().getBooks();
 
         assertTrue(books.size() == 2);
