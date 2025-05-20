@@ -6,6 +6,7 @@ description: >
 recipeList:
   - org.openrewrite.java.testing.assertj.Assertj
 #  - org.openrewrite.java.testing.junit5.JUnit5BestPractices
+#  - com.github.timtebeek.Java21ForTests
 ---
 type: specs.openrewrite.org/v1beta/recipe
 name: com.github.timtebeek.Java21ForTests
@@ -14,5 +15,16 @@ description: >
   Upgrade your tests to Java 21.
 preconditions:
   - org.openrewrite.java.search.IsLikelyTest
+recipeList:
+  - org.openrewrite.java.migrate.UpgradeToJava21
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: com.github.timtebeek.ReviewPullRequest
+displayName: Adopt Java 21 for tests
+description: >
+  Upgrade your tests to Java 21.
+preconditions:
+  - org.openrewrite.FindSourceFiles:
+      filePattern: "**/src/test/java/com/github/timtebeek/betterassertions/review/*.java"
 recipeList:
   - org.openrewrite.java.migrate.UpgradeToJava21
