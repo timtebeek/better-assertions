@@ -7,4 +7,12 @@ recipeList:
   - org.openrewrite.java.testing.assertj.Assertj
 #  - org.openrewrite.java.testing.junit5.JUnit5BestPractices
 ---
-# TODO Switch to Java 21 for tests only
+type: specs.openrewrite.org/v1beta/recipe
+name: com.github.timtebeek.Java21ForTests
+displayName: Adopt Java 21 for tests
+description: >
+  Upgrade your tests to Java 21.
+preconditions:
+  - org.openrewrite.java.search.IsLikelyTest
+recipeList:
+  - org.openrewrite.java.migrate.UpgradeToJava21
