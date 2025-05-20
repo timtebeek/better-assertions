@@ -12,6 +12,7 @@ A bit of a rant on bad testing practices seen over the years.
 0. [AssertEquals list size](src/test/java/com/github/timtebeek/betterassertions/junit5/AssertListSize.java)
 0. [AssertTrue list contains](src/test/java/com/github/timtebeek/betterassertions/junit5/AssertListContains.java)
 0. [Failure message argument order](src/test/java/com/github/timtebeek/betterassertions/junit5/ArgumentOrderTest.java)
+0. [Try catch and fail](src/test/java/com/github/timtebeek/betterassertions/junit5/TryCatchFailTest.java) 
 
 ### Dated examples
 
