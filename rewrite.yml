@@ -20,11 +20,12 @@ recipeList:
 ---
 type: specs.openrewrite.org/v1beta/recipe
 name: com.github.timtebeek.ReviewPullRequest
-displayName: Adopt Java 21 for tests
+displayName: Review Pull Requests
 description: >
-  Upgrade your tests to Java 21.
+  Apply best practices to pull requests to educate your team.
 preconditions:
   - org.openrewrite.FindSourceFiles:
+      # Artificially limit the scope to limit out of scope comments
       filePattern: "**/src/test/java/com/github/timtebeek/betterassertions/review/*.java"
 recipeList:
-  - org.openrewrite.java.migrate.UpgradeToJava21
+  - org.openrewrite.java.testing.assertj.Assertj
