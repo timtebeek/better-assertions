@@ -10,4 +10,11 @@ public class Bundle {
                 new Book("Clean Code", "Robert C. Martin", 2008)
         );
     }
+
+    public List<String> getAuthors() {
+        List<Book> books = getBooks();
+//        Book first = books.get(0);
+//        Book first = books.getFirst();
+        return books.stream().map(Book::getAuthor).toList();
+    }
 }
