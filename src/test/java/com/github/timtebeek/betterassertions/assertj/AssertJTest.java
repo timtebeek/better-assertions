@@ -24,6 +24,20 @@ class AssertJTest {
         assertThat(books).doesNotContain(new Book("Java 8 in Action", "Raoul-Gabriel Urma", 2014));
     }
 
+    @Test
+    void chained() {
+        List<Book> books = new Bundle().getBooks();
+
+        // Repeated assertions on the same object
+        assertThat(books)
+                .isNotNull()
+                .hasSize(3)
+                .contains(new Book("Effective Java", "Joshua Bloch", 2001))
+                .contains(new Book("Java Concurrency in Practice", "Brian Goetz", 2006))
+                .contains(new Book("Clean Code", "Robert C. Martin", 2008))
+                .doesNotContain(new Book("Java 8 in Action", "Raoul-Gabriel Urma", 2014));
+    }
+
     // `assertThatThrownBy` does not yet retain last statement only
     @Test
     void expectException() {
