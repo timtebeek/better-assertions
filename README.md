@@ -37,8 +37,10 @@ mvn rewrite:run -Drewrite.activeRecipes=com.github.timtebeek.BetterAssertions
 
 A few examples of my favorite features of AssertJ.
 
+0. Chained assertions
 0. [Custom AssertionProvider](src/test/java/com/github/timtebeek/betterassertions/assertj/AssertThatBookTest.java)
 0. [Soft assertions](src/test/java/com/github/timtebeek/betterassertions/assertj/AssertSoftlyTest.java)
+0. [Satisfies](src/test/java/com/github/timtebeek/betterassertions/assertj/SatisfiesTest.java)
 
 ### AssertJ's own examples
 0. https://github.com/assertj/assertj-examples/
