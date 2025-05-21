@@ -20,13 +20,15 @@ class TryCatchFailTest {
     @Test
     void expectNoException() {
         try {
-            boom();
+            noBoom();
             assertTrue(true, "No Exception");
         } catch (IllegalStateException e) {
             fail("Exception caught");
         }
     }
 
+    private void noBoom() {
+    }
     private void boom() {
         throw new IllegalStateException("boom!");
     }
