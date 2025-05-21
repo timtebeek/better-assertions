@@ -1,7 +1,7 @@
 package com.github.timtebeek.betterassertions.assertj;
 
 import com.github.timtebeek.betterassertions.Book;
-import com.github.timtebeek.betterassertions.BookTester;
+import com.github.timtebeek.betterassertions.assertj.provider.BookTester;
 import com.github.timtebeek.betterassertions.Bundle;
 import org.junit.jupiter.api.Test;
 
