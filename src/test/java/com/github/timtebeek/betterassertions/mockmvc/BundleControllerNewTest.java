@@ -21,4 +21,10 @@ class BundleControllerNewTest {
                         title -> assertThat(title).isEqualTo("Effective Java"));
     }
 
+    @Test
+    void boom() {
+        assertThat(mockMvc.get().uri("/boom"))
+                .hasStatus5xxServerError();
+    }
+
 }

@@ -24,4 +24,10 @@ class BundleControllerOldTest {
                         jsonPath("$.books[0].title").value("Effective Java"));
     }
 
+    @Test
+    void boom() throws Exception {
+        mockMvc.perform(get("/boom"))
+                .andExpect(status().isInternalServerError());
+    }
+
 }
