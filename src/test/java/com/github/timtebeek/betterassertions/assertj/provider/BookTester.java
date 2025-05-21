@@ -21,6 +21,7 @@ public class BookTester extends AbstractObjectAssert<BookTester, Book> implement
         return new BookTester(book);
     }
 
+    // Delegating matchers
     public AbstractStringAssert<?> author() {
         return Assertions.assertThat(book.getAuthor()).describedAs("author");
     }
@@ -31,5 +32,33 @@ public class BookTester extends AbstractObjectAssert<BookTester, Book> implement
 
     public AbstractIntegerAssert<?> year() {
         return Assertions.assertThat(book.getYear()).describedAs("year");
+    }
+
+    // Exact matches
+    public BookTester hasAuthor(String author) {
+        assertThat()
+                .isNotNull()
+                .author()
+                .describedAs("author")
+                .isEqualTo(author);
+        return myself;
+    }
+
+    public BookTester hasTitle(String title) {
+        assertThat()
+                .isNotNull()
+                .title()
+                .describedAs("title")
+                .isEqualTo(title);
+        return myself;
+    }
+
+    public BookTester hasYear(int year) {
+        assertThat()
+                .isNotNull()
+                .year()
+                .describedAs("year")
+                .isEqualTo(year);
+        return myself;
     }
 }
