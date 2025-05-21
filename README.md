@@ -38,8 +38,14 @@ mvn rewrite:run -Drewrite.activeRecipes=com.github.timtebeek.BetterAssertions
 A few examples of my favorite features of AssertJ.
 
 0. [Custom AssertionProvider](src/test/java/com/github/timtebeek/betterassertions/assertj/AssertThatBookTest.java)
+0. 
 
 ### AssertJ's own examples
 0. https://github.com/assertj/assertj-examples/
 0. https://github.com/assertj/assertj-examples/commit/72c339f0f72fd4a6e903c25af2d3f093702f3e4c
 
+### MockMvc examples
+
+0. [MockMvc test with Hamcrest](src/test/java/com/github/timtebeek/betterassertions/mockmvc/BundleControllerOldTest.java)
+0. [MockMvc test with AssertJ](src/test/java/com/github/timtebeek/betterassertions/mockmvc/BundleControllerNewTest.java)
+0. [MockMvc test with bridge](src/test/java/com/github/timtebeek/betterassertions/mockmvc/BundleControllerBridgeTest.java)
