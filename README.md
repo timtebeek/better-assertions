@@ -35,8 +35,11 @@ mvn rewrite:run -Drewrite.activeRecipes=com.github.timtebeek.BetterAssertions
 
 ### Better examples
 
-A few examples of how to improve the above tests.
+A few examples of my favorite features of AssertJ.
 
+0. [Custom AssertionProvider](src/test/java/com/github/timtebeek/betterassertions/assertj/AssertThatBookTest.java)
+
+### AssertJ's own examples
 0. https://github.com/assertj/assertj-examples/
 0. https://github.com/assertj/assertj-examples/commit/72c339f0f72fd4a6e903c25af2d3f093702f3e4c
 
