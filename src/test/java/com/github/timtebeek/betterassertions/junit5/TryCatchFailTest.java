@@ -8,12 +8,22 @@ import static org.junit.jupiter.api.Assertions.fail;
 class TryCatchFailTest {
 
     @Test
-    void tryCatchFail() {
+    void expectException() {
         try {
             boom();
             fail("Exception uncaught");
         } catch (IllegalStateException e) {
             assertTrue(true, "Exception caught");
+        }
+    }
+
+    @Test
+    void expectNoException() {
+        try {
+            boom();
+            assertTrue(true, "No Exception");
+        } catch (IllegalStateException e) {
+            fail("Exception caught");
         }
     }
 
