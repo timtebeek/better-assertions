@@ -2,6 +2,8 @@ package com.github.timtebeek.betterassertions;
 
 import java.util.List;
 
+import static java.util.stream.Collectors.toList;
+
 public class Bundle {
     public List<Book> getBooks() {
         return List.of(
@@ -15,6 +17,8 @@ public class Bundle {
         List<Book> books = getBooks();
 //        Book first = books.get(0);
 //        Book first = books.getFirst();
-        return books.stream().map(Book::getAuthor).toList();
+        return books.stream()
+                .map(Book::getAuthor)
+                .collect(toList());
     }
 }
