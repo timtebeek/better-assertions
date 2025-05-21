@@ -21,6 +21,9 @@
         <maven.compiler.testSource>21</maven.compiler.testSource>
         <maven.compiler.testTarget>21</maven.compiler.testTarget>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Use a newer AssertJ version for `actual()` -->
+        <assertj.version>3.27.3</assertj.version>
     </properties>
 
     <dependencies>
@@ -64,6 +67,11 @@
                 <configuration>
                 </configuration>
                 <dependencies>
+                    <dependency>
+                        <groupId>org.openrewrite.recipe</groupId>
+                        <artifactId>rewrite-migrate-java</artifactId>
+                        <version>3.9.0</version>
+                    </dependency>
                     <dependency>
                         <groupId>org.openrewrite.recipe</groupId>
                         <artifactId>rewrite-testing-frameworks</artifactId>
