@@ -21,4 +21,24 @@ public class Bundle {
                 .map(Book::getAuthor)
                 .collect(toList());
     }
+
+    public String summary() {
+        StringBuilder summary = new StringBuilder();
+        summary.append("Books:\n");
+        for (Book book : getBooks()) {
+            summary.append(book.getTitle())
+                    .append(" by ")
+                    .append(book.getAuthor())
+                    .append(" (")
+                    .append(book.getYear())
+                    .append(")\n");
+        }
+        summary.append("Authors:\n");
+        for (String author : getAuthors()) {
+            summary.append(author).append("\n");
+        }
+        summary.append("Total books: ").append(getBooks().size()).append("\n");
+        summary.append("Total authors: ").append(getAuthors().size()).append("\n");
+        return summary.toString();
+    }
 }

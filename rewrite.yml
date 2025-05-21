@@ -5,8 +5,7 @@ description: >
   Convert various imperfect assertion patterns to AssertJ.
 recipeList:
   - org.openrewrite.java.testing.assertj.Assertj
-#  - org.openrewrite.java.testing.junit5.JUnit5BestPractices
-#  - com.github.timtebeek.Java21ForTests
+  - com.github.timtebeek.Java21ForTests
 ---
 type: specs.openrewrite.org/v1beta/recipe
 name: com.github.timtebeek.Java21ForTests
