@@ -2,6 +2,7 @@ package com.github.timtebeek.betterassertions.hamcrest;
 
 import com.github.timtebeek.betterassertions.Book;
 import com.github.timtebeek.betterassertions.Bundle;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -35,12 +36,23 @@ class HamcrestTest {
 
     // Incorrect usage of Hamcrest
     // - First case passes; second and third cases fail
+    @Disabled
     @Test
     void failingTest() {
         List<Book> books = new Bundle().getBooks();
 
+        // Wrong way with Hamcrest:
         assertThat(books, contains(new Book("Effective Java", "Joshua Bloch", 2001)));
         assertThat(books, contains(new Book("Java Concurrency in Practice", "Brian Goetz", 2006)));
         assertThat(books, contains(new Book("Clean Code", "Robert C. Martin", 2008)));
+
+        // Correct way with Hamcrest:
+        assertThat(books, contains(
+                new Book("Effective Java", "Joshua Bloch", 2001),
+                new Book("Java Concurrency in Practice", "Brian Goetz", 2006),
+                new Book("Clean Code", "Robert C. Martin", 2008)
+        ));
+
+        // Not always clear what's correct
     }
 }

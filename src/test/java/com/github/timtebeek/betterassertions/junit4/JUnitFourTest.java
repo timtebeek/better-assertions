@@ -14,7 +14,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
-public class JUnitFourTest { // Requires public modifier
+public class JUnitFourTest { // Requires public modifier still
 
     @Test
     public void bundle() { // Can be any name, but has to be public
