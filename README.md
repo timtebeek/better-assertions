@@ -21,7 +21,7 @@ Beyond just bad practices, there are also just outdated practices.
 
 1. [JUnit 3](src/test/java/com/github/timtebeek/betterassertions/junit3/JUnitThreeTest.java)
 0. [JUnit 4](src/test/java/com/github/timtebeek/betterassertions/junit4/JUnitFourTest.java)
-0. [Hamcrest](src/test/java/com/github/timtebeek/betterassertions/junit3/JUnitThreeTest.java)
+0. [Hamcrest](src/test/java/com/github/timtebeek/betterassertions/hamcrest/HamcrestTest.java)
 0. [JUnit Jupiter](src/test/java/com/github/timtebeek/betterassertions/junit5/JUnitJupiterTest.java)
 0. [AssertJ](src/test/java/com/github/timtebeek/betterassertions/assertj/AssertJTest.java)
 0. [Outdated Java in tests](src/test/java/com/github/timtebeek/betterassertions/junit5/TextBlockTest.java)
