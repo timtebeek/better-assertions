@@ -18,8 +18,7 @@
     <properties>
         <maven.compiler.release>11</maven.compiler.release>
         <!-- Already use Java 21 in tests, but not yet for runtime -->
-        <maven.compiler.testSource>21</maven.compiler.testSource>
-        <maven.compiler.testTarget>21</maven.compiler.testTarget>
+        <maven.compiler.testRelease>21</maven.compiler.testRelease>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
