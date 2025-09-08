@@ -13,7 +13,7 @@ class TryCatchFailTest {
             boom();
             fail("Exception uncaught");
         } catch (IllegalStateException e) {
-            assertTrue(true, "Exception caught");
+            // Catch before fail is called
         }
     }
 
@@ -29,6 +29,7 @@ class TryCatchFailTest {
 
     private void noBoom() {
     }
+
     private void boom() {
         throw new IllegalStateException("boom!");
     }
