@@ -2,7 +2,7 @@
 # Since this pull request receives untrusted code, we should **NOT** have any secrets in the environment.
 # https://securitylab.github.com/research/github-actions-preventing-pwn-requests/
 ---
-name: receive-pr
+name: ci
 
 on:
   push:
