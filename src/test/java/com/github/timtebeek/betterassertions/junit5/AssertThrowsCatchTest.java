@@ -1,5 +1,6 @@
 package com.github.timtebeek.betterassertions.junit5;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static com.github.timtebeek.betterassertions.junit5.Mock.verify;
@@ -9,6 +10,7 @@ class AssertThrowsCatchTest {
 
     Mock mock = new Mock();
 
+    @Disabled("Can you spot the issue? It's subtle, but broken.")
     @Test
     void assertThrowsTest() {
         assertThrows(IllegalArgumentException.class, () -> {
