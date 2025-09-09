@@ -40,9 +40,7 @@ jobs:
 
       - name: Apply OpenRewrite recipes
         run: |
-          mvn org.openrewrite.maven:rewrite-maven-plugin:LATEST:run \
-            -Drewrite.activeRecipes=com.github.timtebeek.ReviewPullRequest \
-            -Drewrite.recipeArtifactCoordinates=org.openrewrite.recipe:rewrite-migrate-java:RELEASE,org.openrewrite.recipe:rewrite-testing-frameworks:RELEASE
+          mvn rewrite:run -Drewrite.activeRecipes=com.github.timtebeek.BetterAssertions
 
       - name: Verify after
         run: |
