@@ -36,6 +36,14 @@ class AssertJTest {
                 .contains(new Book("Java Concurrency in Practice", "Brian Goetz", 2006))
                 .contains(new Book("Clean Code", "Robert C. Martin", 2008))
                 .doesNotContain(new Book("Java 8 in Action", "Raoul-Gabriel Urma", 2014));
+
+        // Extracting and asserting on a property of an object in a collection
+        assertThat(books)
+                .extracting(Book::getTitle)
+                .containsExactly(
+                        "Effective Java",
+                        "Java Concurrency in Practice",
+                        "Clean Code");
     }
 
     // `assertThatThrownBy` does not yet retain last statement only
@@ -54,4 +62,15 @@ class AssertJTest {
         throw new IllegalArgumentException("boom!");
     }
 
+    @Test
+    void compareFieldsIgnoringYear() {
+        Book hardcover = new Book("Effective Java", "Joshua Bloch", 2001);
+        Book paperback = new Book("Effective Java", "Joshua Bloch", 2018);
+
+        // Compare all fields except 'year'
+        assertThat(hardcover)
+                .usingRecursiveComparison()
+                .ignoringFields("year")
+                .isEqualTo(paperback);
+    }
 }
