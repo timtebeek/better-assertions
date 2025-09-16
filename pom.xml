@@ -17,8 +17,8 @@
 
     <properties>
         <maven.compiler.release>11</maven.compiler.release>
-        <!-- Already use Java 21 in tests, but not yet for runtime -->
-        <maven.compiler.testRelease>21</maven.compiler.testRelease>
+        <!-- Already use Java 25 in tests, but not yet for runtime -->
+        <maven.compiler.testRelease>25</maven.compiler.testRelease>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -66,7 +66,7 @@
                     <dependency>
                         <groupId>org.openrewrite.recipe</groupId>
                         <artifactId>rewrite-migrate-java</artifactId>
-                        <version>3.17.0</version>
+                        <version>3.17.1</version>
                     </dependency>
                     <dependency>
                         <groupId>org.openrewrite.recipe</groupId>
