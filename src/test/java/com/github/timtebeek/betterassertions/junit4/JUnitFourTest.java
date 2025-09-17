@@ -36,9 +36,9 @@ public class JUnitFourTest { // Requires public modifier still
     // Test passes, but the assertions are incorrect!
     @Test
     public void incorrectArgumentOrder() {
-        String expectedTitle = new Bundle().getBooks().get(0).getTitle();
-        assertNotNull(expectedTitle, "Title not null");
-        assertEquals("Title should match", expectedTitle, "Effective Java");
+        String actualTitle = new Bundle().getBooks().get(0).getTitle();
+        assertNotNull(actualTitle, "Title not null");
+        assertEquals("Title should match", actualTitle, "Effective Java");
     }
 
 
