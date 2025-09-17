@@ -35,7 +35,7 @@ class HamcrestTest {
 
 
     // Incorrect usage of Hamcrest
-    // - First case passes; second and third cases fail
+    // - `hasItem` and `contains` are not interchangeable
     @Disabled
     @Test
     void failingTest() {
