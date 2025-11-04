@@ -44,9 +44,9 @@ public class JUnitThreeTest extends junit.framework.TestCase { // Can only exten
 
     // Test passes, but the assertions are incorrect!
     public void testIncorrectArgumentOrder() {
-        String expectedTitle = new Bundle().getBooks().get(0).getTitle();
-        assertNotNull(expectedTitle, "Title not null");
-        assertEquals("Title should match", expectedTitle, "Effective Java");
+        String actualTitle = new Bundle().getBooks().get(0).getTitle();
+        assertNotNull(actualTitle, "Title not null");
+        assertEquals("Title should match", actualTitle, "Effective Java");
     }
 
 }

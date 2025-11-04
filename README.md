@@ -9,11 +9,11 @@ A bit of a rant on bad testing practices seen over the years.
 0. No tests at all.
 0. [Code coverage tests](src/test/java/com/github/timtebeek/betterassertions/coverage/CoverageTest.java)
 0. [Plain `assert`](src/test/java/com/github/timtebeek/betterassertions/plain/PlainAssert.java) 
-0. [AssertThrows catch early](src/test/java/com/github/timtebeek/betterassertions/junit5/AssertThrowsCatchTest.java)
 0. [AssertEquals list size](src/test/java/com/github/timtebeek/betterassertions/junit5/AssertListSize.java)
 0. [AssertTrue list contains](src/test/java/com/github/timtebeek/betterassertions/junit5/AssertListContains.java)
 0. [Failure message argument order](src/test/java/com/github/timtebeek/betterassertions/junit5/ArgumentOrderTest.java)
 0. [Try catch and fail](src/test/java/com/github/timtebeek/betterassertions/junit5/TryCatchFailTest.java)
+0. [AssertThrows catch early](src/test/java/com/github/timtebeek/betterassertions/junit5/AssertThrowsCatchTest.java)
 
 ### Dated examples
 
