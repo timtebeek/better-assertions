@@ -3,13 +3,12 @@ package com.github.timtebeek.betterassertions.assertj.provider;
 import com.github.timtebeek.betterassertions.Book;
 import org.assertj.core.api.*;
 
-public class BookTester extends AbstractObjectAssert<BookTester, Book> implements AssertProvider<BookTester> {
-
-    private final Book book;
+public class BookTester
+        extends AbstractObjectAssert<BookTester, Book>
+        implements AssertProvider<BookTester> {
 
     private BookTester(Book book) {
         super(book, BookTester.class);
-        this.book = book;
     }
 
     public static BookTester of(Book book) {
@@ -18,20 +17,20 @@ public class BookTester extends AbstractObjectAssert<BookTester, Book> implement
 
     @Override
     public BookTester assertThat() {
-        return new BookTester(book);
+        return new BookTester(actual);
     }
 
     // Delegating matchers
     public AbstractStringAssert<?> author() {
-        return Assertions.assertThat(book.getAuthor()).describedAs("author");
+        return Assertions.assertThat(actual.getAuthor()).describedAs("author");
     }
 
     public AbstractStringAssert<?> title() {
-        return Assertions.assertThat(book.getTitle()).describedAs("title");
+        return Assertions.assertThat(actual.getTitle()).describedAs("title");
     }
 
     public AbstractIntegerAssert<?> year() {
-        return Assertions.assertThat(book.getYear()).describedAs("year");
+        return Assertions.assertThat(actual.getYear()).describedAs("year");
     }
 
     // Exact matches

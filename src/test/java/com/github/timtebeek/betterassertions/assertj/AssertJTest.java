@@ -73,4 +73,21 @@ class AssertJTest {
                 .ignoringFields("year")
                 .isEqualTo(paperback);
     }
+
+    @Test
+    void returnActualObject() {
+        Book hardcover = new Book("Effective Java", "Joshua Bloch", 2001);
+
+        // Sometimes helper methods will do some assertions and return a value
+        Book notNull = checkNotNull(hardcover);
+    }
+
+    private Book checkNotNull(Book book) {
+        // Anti-pattern: a separate assertion before a return of the same object
+        assertThat(book).isNotNull();
+        return book;
+
+        // Instead, use the following to immediately return the actual object after assertion
+        // return assertThat(book).isNotNull().actual();
+    }
 }
