@@ -57,4 +57,4 @@ Finally, MockMvc tests can now use AssertJ instead of Hamcrest for assertions.
 1. [MockMvc test with Hamcrest](src/test/java/com/github/timtebeek/betterassertions/mockmvc/BundleControllerOldTest.java)
 0. [MockMvc test with AssertJ](src/test/java/com/github/timtebeek/betterassertions/mockmvc/BundleControllerNewTest.java)
 0. [MockMvc test with bridge](src/test/java/com/github/timtebeek/betterassertions/mockmvc/BundleControllerBridgeTest.java)
-0. https://docs.moderne.io/user-documentation/recipes/recipe-catalog/java/spring/boot4/migratemockmvctoassertj/
+0. [Migrate MockMvc to AssertJ](https://docs.moderne.io/user-documentation/recipes/recipe-catalog/java/spring/boot4/migratemockmvctoassertj/)
