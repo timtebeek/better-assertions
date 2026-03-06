@@ -5,17 +5,17 @@ description: >
   Convert various imperfect assertion patterns to AssertJ.
 recipeList:
   - org.openrewrite.java.testing.assertj.Assertj
-  - com.github.timtebeek.Java21ForTests
+  - com.github.timtebeek.Java25ForTests
 ---
 type: specs.openrewrite.org/v1beta/recipe
-name: com.github.timtebeek.Java21ForTests
-displayName: Adopt Java 21 for tests
+name: com.github.timtebeek.Java25ForTests
+displayName: Adopt Java 25 for tests
 description: >
-  Upgrade your tests to Java 21.
+  Upgrade your tests to Java 25.
 preconditions:
   - org.openrewrite.java.search.IsLikelyTest
 recipeList:
-  - org.openrewrite.java.migrate.UpgradeToJava21
+  - org.openrewrite.java.migrate.UpgradeToJava25
 ---
 type: specs.openrewrite.org/v1beta/recipe
 name: com.github.timtebeek.ReviewPullRequest
