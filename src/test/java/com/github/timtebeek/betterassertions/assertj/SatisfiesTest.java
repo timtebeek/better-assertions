@@ -16,9 +16,9 @@ class SatisfiesTest {
         // Verify all conditions before optionally failing and reporting
         assertThat(book)
                 .satisfies(
-                        b -> BookTester.of(book).title().contains("Effective"),
-                        b -> BookTester.of(book).author().contains("Bloch"),
-                        b -> BookTester.of(book).year().isLessThan(2003)
+                        b -> BookTester.of(b).title().contains("Effective"),
+                        b -> BookTester.of(b).author().contains("Bloch"),
+                        b -> BookTester.of(b).year().isLessThan(2003)
                 );
     }
 
@@ -28,9 +28,9 @@ class SatisfiesTest {
         // Verify all conditions before optionally failing and reporting
         assertThat(book)
                 .satisfies(
-                        b -> BookTester.of(book).title().contains("Ineffective"),
-                        b -> BookTester.of(book).author().contains("Blag"),
-                        b -> BookTester.of(book).year().isEven()
+                        b -> BookTester.of(b).title().contains("Ineffective"),
+                        b -> BookTester.of(b).author().contains("Blag"),
+                        b -> BookTester.of(b).year().isEven()
                 );
     }
 }
