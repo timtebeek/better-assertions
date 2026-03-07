@@ -43,6 +43,10 @@ A quick command to improve the above tests by adopting AssertJ.
 mvn rewrite:run -Drewrite.activeRecipes=com.github.timtebeek.BetterAssertions
 ```
 
+A workshop with related material on automated upgrades can be found at: 
+
+1. https://openrewrite.github.io/break-your-testing-habits/docs/intro
+
 ### AssertJ's own examples
 
 AssertJ themselves also have a helpful, if incomplete example repository.
