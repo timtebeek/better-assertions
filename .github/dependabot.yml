@@ -9,6 +9,10 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
+    groups:
+      openrewrite:
+        patterns:
+          - "org.openrewrite*:*"
   - package-ecosystem: "github-actions"
     directory: "/" # Location of package manifests
     schedule:
